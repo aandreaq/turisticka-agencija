@@ -1,0 +1,45 @@
+.landbot-frame {
+  position: fixed;
+  bottom: 80px; /* da dugme ne preklapa */
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 1000;
+  animation: floatBot 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landbot-frame:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+@keyframes floatBot {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.open-bot-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 15px 18px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1001;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.open-bot-btn:hover {
+  transform: scale(1.1);
+  background: #1b5e20;
+}

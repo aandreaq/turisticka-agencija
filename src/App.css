@@ -1,0 +1,273 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 100%;
+}
+
+
+.App-header {
+  position: sticky;
+  top: 0;
+  background-color: #2c5f2d;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.menu img {
+  height: 100px; 
+  margin-right: 30px;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.menu img:hover {
+  transform: scale(1.1);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #97bc62;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+.hero-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  filter: brightness(65%);
+  transition: transform 0.5s ease;
+}
+
+
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+
+.hero-text h1 {
+  font-size: 3.5em;
+  margin-bottom: 25px;
+}
+
+.hero-text button {
+  padding: 15px 40px;
+  font-size: 1.2em;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.hero-text button:hover {
+  background-color: #357a38;
+  transform: scale(1.05);
+}
+
+/* --- DESTINACIJE --- */
+.destinacije-container {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #e8f2e4; /* ista svetlozelena kao pozadina */
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #2c5f2d;
+}
+
+.destinacije-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.destinacija-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destinacija-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destinacija-card h3 {
+  margin: 15px 0;
+  color: #2c5f2d;
+}
+
+.destinacija-card button {
+  margin-bottom: 15px;
+  padding: 10px 25px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.destinacija-card button:hover {
+  background-color: #357a38;
+  transform: scale(1.05);
+}
+
+.destinacija-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.footer {
+  background: linear-gradient(135deg, #2c5f2d 0%, #4caf50 100%);
+  color: #e8f2e4;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+/* Logo */
+.footer-logo-img {
+  width: 150px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Linkovi */
+.footer-links a {
+  display: block;
+  color: #e8f2e4;
+  text-decoration: none;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* Kontakt info */
+.footer-right h4 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  border-bottom: 2px solid #97bc62;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-right p {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-right span {
+  margin-right: 10px;
+}
+
+/* Društvene mreže */
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: #97bc62; /* svetlozelena pri hoveru */
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  border-top: 1px solid #97bc62;
+  padding-top: 15px;
+  color: #e8f2e4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left, .footer-right {
+    min-width: unset;
+  }
+
+  .footer-social a {
+    margin: 0 5px;
+  }
+}

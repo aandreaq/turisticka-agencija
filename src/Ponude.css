@@ -1,0 +1,205 @@
+.ponude-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 30px;
+  background: #f5f7fa;
+}
+
+/* KARTICE */
+.ponuda-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ponuda-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.ponuda-slika {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ponuda-card h3 {
+  font-size: 1.2rem;
+  margin: 12px 0 8px;
+  color: #2e7d32;
+}
+
+.ponuda-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.rezervisi-dugme, .detalji-dugme {
+  margin-top: 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.rezervisi-dugme:hover, .detalji-dugme:hover {
+  background: #1b5e20;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.modal-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modal-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.modal-card h2 {
+  margin: 10px 0 6px;
+  color: #2e7d32;
+}
+
+.modal-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #b71c1c;
+}
+
+/* TABELA */
+.cena-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.cena-tabela th, .cena-tabela td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.cena-tabela th {
+  background-color: #2e7d32;
+  color: white;
+  font-weight: 600;
+}
+
+.cena-tabela tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.napomena {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* FORMA ZA PUTNIKE */
+.putnik-forma {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.putnik-forma input {
+  flex: 1 1 45%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.putnik-forma h4 {
+  width: 100%;
+  margin-bottom: 5px;
+  color: #2e7d32;
+}
+
+/* ANIMACIJA MODALA */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 1200px) {
+  .ponude-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .ponude-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .ponude-grid { grid-template-columns: 1fr; }
+  .putnik-forma input {
+    flex: 1 1 100%;
+  }
+}
+/* ISTAKNUTI TIP SOBE I DATUM */
+.cena-tabela td.odabrano {
+  background-color: #a5d6a7; /* svetlo zelena */
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.cena-tabela th.odabrano {
+  background-color: #81c784; /* tamnija zelena za zaglavlje */
+  color: #fff;
+}
